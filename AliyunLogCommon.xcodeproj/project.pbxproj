@@ -1,0 +1,489 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F88B63C82654A92B000BBB81 /* AliyunLogCommon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F88B63BE2654A92B000BBB81 /* AliyunLogCommon.framework */; };
+		F88B63CD2654A92B000BBB81 /* AliyunLogCommonTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F88B63CC2654A92B000BBB81 /* AliyunLogCommonTests.m */; };
+		F88B63CF2654A92B000BBB81 /* AliyunLogCommon.h in Headers */ = {isa = PBXBuildFile; fileRef = F88B63C12654A92B000BBB81 /* AliyunLogCommon.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F88B63DF2654AA1E000BBB81 /* IPlugin.h in Headers */ = {isa = PBXBuildFile; fileRef = F88B63DD2654AA1E000BBB81 /* IPlugin.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F88B63E02654AA1E000BBB81 /* IPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = F88B63DE2654AA1E000BBB81 /* IPlugin.m */; };
+		F88B64132654B03F000BBB81 /* SLSConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = F88B64112654B03F000BBB81 /* SLSConfig.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F88B64142654B03F000BBB81 /* SLSConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = F88B64122654B03F000BBB81 /* SLSConfig.m */; };
+		F88B641F2654B1CA000BBB81 /* TCData.h in Headers */ = {isa = PBXBuildFile; fileRef = F88B641D2654B1CA000BBB81 /* TCData.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F88B64202654B1CA000BBB81 /* TCData.m in Sources */ = {isa = PBXBuildFile; fileRef = F88B641E2654B1CA000BBB81 /* TCData.m */; };
+		F88B64232654B20B000BBB81 /* SLSAdapter.h in Headers */ = {isa = PBXBuildFile; fileRef = F88B64212654B20B000BBB81 /* SLSAdapter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F88B64242654B20B000BBB81 /* SLSAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = F88B64222654B20B000BBB81 /* SLSAdapter.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F88B63C92654A92B000BBB81 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F88B63B52654A92B000BBB81 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F88B63BD2654A92B000BBB81;
+			remoteInfo = AliyunLogCommon;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		F88B63BE2654A92B000BBB81 /* AliyunLogCommon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AliyunLogCommon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F88B63C12654A92B000BBB81 /* AliyunLogCommon.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AliyunLogCommon.h; sourceTree = "<group>"; };
+		F88B63C22654A92B000BBB81 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F88B63C72654A92B000BBB81 /* AliyunLogCommonTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AliyunLogCommonTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F88B63CC2654A92B000BBB81 /* AliyunLogCommonTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AliyunLogCommonTests.m; sourceTree = "<group>"; };
+		F88B63CE2654A92B000BBB81 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F88B63DD2654AA1E000BBB81 /* IPlugin.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IPlugin.h; sourceTree = "<group>"; };
+		F88B63DE2654AA1E000BBB81 /* IPlugin.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IPlugin.m; sourceTree = "<group>"; };
+		F88B64112654B03F000BBB81 /* SLSConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SLSConfig.h; sourceTree = "<group>"; };
+		F88B64122654B03F000BBB81 /* SLSConfig.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SLSConfig.m; sourceTree = "<group>"; };
+		F88B641D2654B1CA000BBB81 /* TCData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TCData.h; sourceTree = "<group>"; };
+		F88B641E2654B1CA000BBB81 /* TCData.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TCData.m; sourceTree = "<group>"; };
+		F88B64212654B20B000BBB81 /* SLSAdapter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SLSAdapter.h; sourceTree = "<group>"; };
+		F88B64222654B20B000BBB81 /* SLSAdapter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SLSAdapter.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F88B63BB2654A92B000BBB81 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F88B63C42654A92B000BBB81 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F88B63C82654A92B000BBB81 /* AliyunLogCommon.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F88B63B42654A92B000BBB81 = {
+			isa = PBXGroup;
+			children = (
+				F88B63C02654A92B000BBB81 /* AliyunLogCommon */,
+				F88B63CB2654A92B000BBB81 /* AliyunLogCommonTests */,
+				F88B63BF2654A92B000BBB81 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F88B63BF2654A92B000BBB81 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F88B63BE2654A92B000BBB81 /* AliyunLogCommon.framework */,
+				F88B63C72654A92B000BBB81 /* AliyunLogCommonTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F88B63C02654A92B000BBB81 /* AliyunLogCommon */ = {
+			isa = PBXGroup;
+			children = (
+				F88B63DC2654AA00000BBB81 /* plugin */,
+				F88B63C12654A92B000BBB81 /* AliyunLogCommon.h */,
+				F88B63C22654A92B000BBB81 /* Info.plist */,
+				F88B64112654B03F000BBB81 /* SLSConfig.h */,
+				F88B64122654B03F000BBB81 /* SLSConfig.m */,
+				F88B641D2654B1CA000BBB81 /* TCData.h */,
+				F88B641E2654B1CA000BBB81 /* TCData.m */,
+				F88B64212654B20B000BBB81 /* SLSAdapter.h */,
+				F88B64222654B20B000BBB81 /* SLSAdapter.m */,
+			);
+			path = AliyunLogCommon;
+			sourceTree = "<group>";
+		};
+		F88B63CB2654A92B000BBB81 /* AliyunLogCommonTests */ = {
+			isa = PBXGroup;
+			children = (
+				F88B63CC2654A92B000BBB81 /* AliyunLogCommonTests.m */,
+				F88B63CE2654A92B000BBB81 /* Info.plist */,
+			);
+			path = AliyunLogCommonTests;
+			sourceTree = "<group>";
+		};
+		F88B63DC2654AA00000BBB81 /* plugin */ = {
+			isa = PBXGroup;
+			children = (
+				F88B63DD2654AA1E000BBB81 /* IPlugin.h */,
+				F88B63DE2654AA1E000BBB81 /* IPlugin.m */,
+			);
+			path = plugin;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		F88B63B92654A92B000BBB81 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F88B63CF2654A92B000BBB81 /* AliyunLogCommon.h in Headers */,
+				F88B64132654B03F000BBB81 /* SLSConfig.h in Headers */,
+				F88B641F2654B1CA000BBB81 /* TCData.h in Headers */,
+				F88B63DF2654AA1E000BBB81 /* IPlugin.h in Headers */,
+				F88B64232654B20B000BBB81 /* SLSAdapter.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		F88B63BD2654A92B000BBB81 /* AliyunLogCommon */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F88B63D22654A92B000BBB81 /* Build configuration list for PBXNativeTarget "AliyunLogCommon" */;
+			buildPhases = (
+				F88B63B92654A92B000BBB81 /* Headers */,
+				F88B63BA2654A92B000BBB81 /* Sources */,
+				F88B63BB2654A92B000BBB81 /* Frameworks */,
+				F88B63BC2654A92B000BBB81 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AliyunLogCommon;
+			productName = AliyunLogCommon;
+			productReference = F88B63BE2654A92B000BBB81 /* AliyunLogCommon.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		F88B63C62654A92B000BBB81 /* AliyunLogCommonTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F88B63D52654A92B000BBB81 /* Build configuration list for PBXNativeTarget "AliyunLogCommonTests" */;
+			buildPhases = (
+				F88B63C32654A92B000BBB81 /* Sources */,
+				F88B63C42654A92B000BBB81 /* Frameworks */,
+				F88B63C52654A92B000BBB81 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F88B63CA2654A92B000BBB81 /* PBXTargetDependency */,
+			);
+			name = AliyunLogCommonTests;
+			productName = AliyunLogCommonTests;
+			productReference = F88B63C72654A92B000BBB81 /* AliyunLogCommonTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F88B63B52654A92B000BBB81 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1250;
+				TargetAttributes = {
+					F88B63BD2654A92B000BBB81 = {
+						CreatedOnToolsVersion = 12.5;
+					};
+					F88B63C62654A92B000BBB81 = {
+						CreatedOnToolsVersion = 12.5;
+					};
+				};
+			};
+			buildConfigurationList = F88B63B82654A92B000BBB81 /* Build configuration list for PBXProject "AliyunLogCommon" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F88B63B42654A92B000BBB81;
+			productRefGroup = F88B63BF2654A92B000BBB81 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F88B63BD2654A92B000BBB81 /* AliyunLogCommon */,
+				F88B63C62654A92B000BBB81 /* AliyunLogCommonTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F88B63BC2654A92B000BBB81 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F88B63C52654A92B000BBB81 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F88B63BA2654A92B000BBB81 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F88B64202654B1CA000BBB81 /* TCData.m in Sources */,
+				F88B64142654B03F000BBB81 /* SLSConfig.m in Sources */,
+				F88B64242654B20B000BBB81 /* SLSAdapter.m in Sources */,
+				F88B63E02654AA1E000BBB81 /* IPlugin.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F88B63C32654A92B000BBB81 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F88B63CD2654A92B000BBB81 /* AliyunLogCommonTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F88B63CA2654A92B000BBB81 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F88B63BD2654A92B000BBB81 /* AliyunLogCommon */;
+			targetProxy = F88B63C92654A92B000BBB81 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		F88B63D02654A92B000BBB81 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		F88B63D12654A92B000BBB81 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		F88B63D32654A92B000BBB81 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = QWPJRHMG6U;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = AliyunLogCommon/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = org.cocoapods.alysls.AliyunLogCommon;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F88B63D42654A92B000BBB81 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = QWPJRHMG6U;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = AliyunLogCommon/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = org.cocoapods.alysls.AliyunLogCommon;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		F88B63D62654A92B000BBB81 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = QWPJRHMG6U;
+				INFOPLIST_FILE = AliyunLogCommonTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = org.cocoapods.alysls.AliyunLogCommonTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F88B63D72654A92B000BBB81 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = QWPJRHMG6U;
+				INFOPLIST_FILE = AliyunLogCommonTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = org.cocoapods.alysls.AliyunLogCommonTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F88B63B82654A92B000BBB81 /* Build configuration list for PBXProject "AliyunLogCommon" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F88B63D02654A92B000BBB81 /* Debug */,
+				F88B63D12654A92B000BBB81 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F88B63D22654A92B000BBB81 /* Build configuration list for PBXNativeTarget "AliyunLogCommon" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F88B63D32654A92B000BBB81 /* Debug */,
+				F88B63D42654A92B000BBB81 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F88B63D52654A92B000BBB81 /* Build configuration list for PBXNativeTarget "AliyunLogCommonTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F88B63D62654A92B000BBB81 /* Debug */,
+				F88B63D72654A92B000BBB81 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F88B63B52654A92B000BBB81 /* Project object */;
+}
