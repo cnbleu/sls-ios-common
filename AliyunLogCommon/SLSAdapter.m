@@ -41,6 +41,7 @@
         [plugin initWithSLSConfig:config];
     }];
 
+    NSLog(@"ALSAdapter init end.");
     return YES;
 }
 
