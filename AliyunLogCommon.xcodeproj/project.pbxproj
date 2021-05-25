@@ -45,6 +45,8 @@
 		F88B641E2654B1CA000BBB81 /* TCData.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TCData.m; sourceTree = "<group>"; };
 		F88B64212654B20B000BBB81 /* SLSAdapter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SLSAdapter.h; sourceTree = "<group>"; };
 		F88B64222654B20B000BBB81 /* SLSAdapter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SLSAdapter.m; sourceTree = "<group>"; };
+		F89DB95E265CBB510086FE2A /* AliyunLogCommon.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = AliyunLogCommon.podspec; sourceTree = "<group>"; };
+		F89DB95F265CBC520086FE2A /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,8 @@
 		F88B63B42654A92B000BBB81 = {
 			isa = PBXGroup;
 			children = (
+				F89DB95F265CBC520086FE2A /* LICENSE */,
+				F89DB95E265CBB510086FE2A /* AliyunLogCommon.podspec */,
 				F88B63C02654A92B000BBB81 /* AliyunLogCommon */,
 				F88B63CB2654A92B000BBB81 /* AliyunLogCommonTests */,
 				F88B63BF2654A92B000BBB81 /* Products */,
