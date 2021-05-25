@@ -55,7 +55,7 @@ https://help.aliyun.com/product/28958.html
   #  profile URL.
   #
 
-  spec.author             = { "yulong.gyl" => "yulong.gyl@alibaba-inc.com" }
+  spec.author             = { 'aliyun-log' => 'davidzhang.zc@alibaba-inc.com' }
   # Or just: spec.author    = "yulong.gyl"
   # spec.authors            = { "yulong.gyl" => "yulong.gyl@alibaba-inc.com" }
   spec.social_media_url   = 'http://t.cn/AiRpol8C'
