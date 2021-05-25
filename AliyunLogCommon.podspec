@@ -82,7 +82,7 @@ https://help.aliyun.com/product/28958.html
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  spec.source       =  { :git => 'https://github.com/aliyun/aliyun-log-ios-sdk.git', :tag => spec.version.to_s }
+  spec.source       =  { :git => 'git@gitlab.alibaba-inc.com:sls/sls-ios-common.git', :tag => spec.version.to_s }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -95,7 +95,7 @@ https://help.aliyun.com/product/28958.html
 
   # spec.source_files  = "Classes", "Classes/**/*.{h,m}"
   # spec.exclude_files = "Classes/Exclude"
-  spec.source_files = "AliyunLogCommon/*.{h,m}"
+  spec.source_files = "AliyunLogCommon/*.{h,m}", "AliyunLogCommon/plugin/*.{h,m}"
 
   # spec.public_header_files = "Classes/**/*.h"
   spec.public_header_files = "AliyunLogCommon/*.h", "AliyunLogCommon/plugin/*.h"
