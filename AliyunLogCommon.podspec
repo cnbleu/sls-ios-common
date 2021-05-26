@@ -16,7 +16,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "AliyunLogCommon"
-  spec.version      = "1.0.2"
+  spec.version      = "1.0.3"
   spec.summary      = "aliyun sls iOS log common"
 
   # This description is used to generate tags and improve search results.
@@ -82,7 +82,7 @@ https://help.aliyun.com/product/28958.html
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  spec.source       =  { :git => 'git@gitlab.alibaba-inc.com:sls/sls-ios-common.git', :tag => spec.version.to_s }
+  spec.source = { :git => 'git@github.com:cnbleu/sls-ios-common.git', :tag => spec.version.to_s }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
