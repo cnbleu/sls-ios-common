@@ -33,6 +33,18 @@
     return self;
 }
 
+- (void)resetSecurityToken:(NSString *)accessKeyId secret:(NSString *)accessKeySecret token:(NSString *)token
+{
+    __block NSString *keyId = accessKeyId;
+    __block NSString *keySecret = accessKeySecret;
+    __block NSString *keyToken = token;
+    
+    [_plugins enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+            IPlugin *plugin = obj;
+            [plugin resetSecurityToken:keyId secret:keySecret token:keyToken];
+    }];
+}
+
 #pragma mark - init adapter
 - (BOOL) initWithSLSConfig:(SLSConfig *)config {
     

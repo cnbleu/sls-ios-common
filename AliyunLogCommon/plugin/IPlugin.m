@@ -15,4 +15,7 @@
     NSLog(@"plugin: %@ initWithSLSConfig", self.name);
     return YES;
 }
+- (void)resetSecurityToken:(NSString *)accessKeyId secret:(NSString *)accessKeySecret token:(NSString *)token {
+    
+}
 @end
