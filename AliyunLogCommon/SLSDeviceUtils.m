@@ -166,8 +166,8 @@
     CGSize size = [[UIScreen mainScreen] bounds].size;
     CGFloat scale = [[UIScreen mainScreen] scale];
     
-//    return [NSString stringWithFormat:@"%f*%f",size.height * scale, size.width * scale];
-    return NSStringFromCGSize(CGSizeMake(size.width * scale, size.height * scale));
+    return [NSString stringWithFormat:@"%.0f*%.0f",size.height * scale, size.width * scale];
+//    return NSStringFromCGSize(CGSizeMake(size.width * scale, size.height * scale));
 }
 
 + (NSString *)getCarrier {
