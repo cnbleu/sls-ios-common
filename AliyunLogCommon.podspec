@@ -95,10 +95,10 @@ https://help.aliyun.com/product/28958.html
 
   # spec.source_files  = "Classes", "Classes/**/*.{h,m}"
   # spec.exclude_files = "Classes/Exclude"
-  spec.source_files = "AliyunLogCommon/*.{h,m}", "AliyunLogCommon/plugin/*.{h,m}"
+  spec.source_files = "AliyunLogCommon/*.{h,m}", "AliyunLogCommon/plugin/*.{h,m}", "AliyunLogCommon/utdid/*.{h,m}"
 
   # spec.public_header_files = "Classes/**/*.h"
-  spec.public_header_files = "AliyunLogCommon/*.h", "AliyunLogCommon/plugin/*.h"
+  spec.public_header_files = "AliyunLogCommon/*.h", "AliyunLogCommon/plugin/*.h", "AliyunLogCommon/utdid/*.h"
 
 
   # ――― Resources ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #

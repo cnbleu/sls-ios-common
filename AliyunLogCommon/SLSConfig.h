@@ -26,6 +26,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic, assign) NSString * channelName;
 @property(nonatomic, assign) NSString * userNick;
 @property(nonatomic, assign) NSString * longLoginNick;
+@property(nonatomic, assign) NSString * userId;
+@property(nonatomic, assign) NSString * longLoginUserId;
 @property(nonatomic, assign) NSString * loginType;
 @end
 

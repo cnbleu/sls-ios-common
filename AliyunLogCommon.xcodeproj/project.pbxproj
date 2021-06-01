@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F8193B9F266517EC00C3BD07 /* SLSDeviceUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = F8193B9D266517EC00C3BD07 /* SLSDeviceUtils.h */; };
+		F8193BA0266517EC00C3BD07 /* SLSDeviceUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = F8193B9E266517EC00C3BD07 /* SLSDeviceUtils.m */; };
 		F88B63C82654A92B000BBB81 /* AliyunLogCommon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F88B63BE2654A92B000BBB81 /* AliyunLogCommon.framework */; };
 		F88B63CD2654A92B000BBB81 /* AliyunLogCommonTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F88B63CC2654A92B000BBB81 /* AliyunLogCommonTests.m */; };
 		F88B63CF2654A92B000BBB81 /* AliyunLogCommon.h in Headers */ = {isa = PBXBuildFile; fileRef = F88B63C12654A92B000BBB81 /* AliyunLogCommon.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -18,6 +20,10 @@
 		F88B64202654B1CA000BBB81 /* TCData.m in Sources */ = {isa = PBXBuildFile; fileRef = F88B641E2654B1CA000BBB81 /* TCData.m */; };
 		F88B64232654B20B000BBB81 /* SLSAdapter.h in Headers */ = {isa = PBXBuildFile; fileRef = F88B64212654B20B000BBB81 /* SLSAdapter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F88B64242654B20B000BBB81 /* SLSAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = F88B64222654B20B000BBB81 /* SLSAdapter.m */; };
+		F8C9BDC0266605E40076D211 /* Utdid.h in Headers */ = {isa = PBXBuildFile; fileRef = F8C9BDBE266605E40076D211 /* Utdid.h */; };
+		F8C9BDC1266605E40076D211 /* Utdid.m in Sources */ = {isa = PBXBuildFile; fileRef = F8C9BDBF266605E40076D211 /* Utdid.m */; };
+		F8C9BDC4266607F00076D211 /* Storage.h in Headers */ = {isa = PBXBuildFile; fileRef = F8C9BDC2266607F00076D211 /* Storage.h */; };
+		F8C9BDC5266607F00076D211 /* Storage.m in Sources */ = {isa = PBXBuildFile; fileRef = F8C9BDC3266607F00076D211 /* Storage.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,6 +37,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F8193B9D266517EC00C3BD07 /* SLSDeviceUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SLSDeviceUtils.h; sourceTree = "<group>"; };
+		F8193B9E266517EC00C3BD07 /* SLSDeviceUtils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SLSDeviceUtils.m; sourceTree = "<group>"; };
 		F88B63BE2654A92B000BBB81 /* AliyunLogCommon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AliyunLogCommon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F88B63C12654A92B000BBB81 /* AliyunLogCommon.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AliyunLogCommon.h; sourceTree = "<group>"; };
 		F88B63C22654A92B000BBB81 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -47,6 +55,10 @@
 		F88B64222654B20B000BBB81 /* SLSAdapter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SLSAdapter.m; sourceTree = "<group>"; };
 		F89DB95E265CBB510086FE2A /* AliyunLogCommon.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = AliyunLogCommon.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		F89DB95F265CBC520086FE2A /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		F8C9BDBE266605E40076D211 /* Utdid.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Utdid.h; sourceTree = "<group>"; };
+		F8C9BDBF266605E40076D211 /* Utdid.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Utdid.m; sourceTree = "<group>"; };
+		F8C9BDC2266607F00076D211 /* Storage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Storage.h; sourceTree = "<group>"; };
+		F8C9BDC3266607F00076D211 /* Storage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Storage.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +103,7 @@
 		F88B63C02654A92B000BBB81 /* AliyunLogCommon */ = {
 			isa = PBXGroup;
 			children = (
+				F8C9BDBD266605B30076D211 /* utdid */,
 				F88B63DC2654AA00000BBB81 /* plugin */,
 				F88B63C12654A92B000BBB81 /* AliyunLogCommon.h */,
 				F88B63C22654A92B000BBB81 /* Info.plist */,
@@ -100,6 +113,8 @@
 				F88B641E2654B1CA000BBB81 /* TCData.m */,
 				F88B64212654B20B000BBB81 /* SLSAdapter.h */,
 				F88B64222654B20B000BBB81 /* SLSAdapter.m */,
+				F8193B9D266517EC00C3BD07 /* SLSDeviceUtils.h */,
+				F8193B9E266517EC00C3BD07 /* SLSDeviceUtils.m */,
 			);
 			path = AliyunLogCommon;
 			sourceTree = "<group>";
@@ -122,6 +137,17 @@
 			path = plugin;
 			sourceTree = "<group>";
 		};
+		F8C9BDBD266605B30076D211 /* utdid */ = {
+			isa = PBXGroup;
+			children = (
+				F8C9BDBE266605E40076D211 /* Utdid.h */,
+				F8C9BDBF266605E40076D211 /* Utdid.m */,
+				F8C9BDC2266607F00076D211 /* Storage.h */,
+				F8C9BDC3266607F00076D211 /* Storage.m */,
+			);
+			path = utdid;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -130,10 +156,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				F88B63CF2654A92B000BBB81 /* AliyunLogCommon.h in Headers */,
+				F8193B9F266517EC00C3BD07 /* SLSDeviceUtils.h in Headers */,
 				F88B64132654B03F000BBB81 /* SLSConfig.h in Headers */,
 				F88B641F2654B1CA000BBB81 /* TCData.h in Headers */,
+				F8C9BDC4266607F00076D211 /* Storage.h in Headers */,
 				F88B63DF2654AA1E000BBB81 /* IPlugin.h in Headers */,
 				F88B64232654B20B000BBB81 /* SLSAdapter.h in Headers */,
+				F8C9BDC0266605E40076D211 /* Utdid.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -233,10 +262,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F8C9BDC1266605E40076D211 /* Utdid.m in Sources */,
 				F88B64202654B1CA000BBB81 /* TCData.m in Sources */,
 				F88B64142654B03F000BBB81 /* SLSConfig.m in Sources */,
 				F88B64242654B20B000BBB81 /* SLSAdapter.m in Sources */,
 				F88B63E02654AA1E000BBB81 /* IPlugin.m in Sources */,
+				F8193BA0266517EC00C3BD07 /* SLSDeviceUtils.m in Sources */,
+				F8C9BDC5266607F00076D211 /* Storage.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

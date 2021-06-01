@@ -19,8 +19,11 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic, strong) NSString * channel;
 @property(nonatomic, strong) NSString * channel_name;
 @property(nonatomic, strong) NSString * user_nick;
+@property(nonatomic, strong) NSString * user_id;
 @property(nonatomic, strong) NSString * long_login_nick;
+@property(nonatomic, strong) NSString * long_login_user_id;
 @property(nonatomic, strong) NSString * logon_type;
+@property(nonatomic, strong) NSString * utdid;
 @property(nonatomic, strong) NSString * imei;
 @property(nonatomic, strong) NSString * imsi;
 @property(nonatomic, strong) NSString * imeisi;
@@ -66,9 +69,10 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic, strong) NSString * city;
 @property(nonatomic, strong) NSString * district;
 
-
++ (TCData *) createDefault;
 + (TCData *) createDefaultWithSLSConfig: (SLSConfig *) config;
 + (NSString *) fillWithDashIfEmpty: (NSString *) content;
+- (NSDictionary *) toDictionary;
 @end
 
 NS_ASSUME_NONNULL_END
