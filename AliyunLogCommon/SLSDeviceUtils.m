@@ -12,7 +12,8 @@
 #import <CoreTelephony/CTCarrier.h>
 #import <sys/stat.h>
 #import <dlfcn.h>
-
+//#import <Reachability/Reachability.h>
+#import "Reachability/Reachability.h"
 
 @interface SLSDeviceUtils ()
 
@@ -184,6 +185,20 @@
 }
 
 + (NSString *)getNetType {
+    Reachability *reachability = [Reachability reachabilityWithHostname:@"www.aliyun.com"];
+    switch ([reachability currentReachabilityStatus]) {
+        case NotReachable:
+            return @"没有网络";
+        case ReachableViaWiFi:
+            return @"Wi-Fi";
+            break;
+        case ReachableViaWWAN:
+            // WWAN
+            break;
+        default:
+            return @"";
+    }
+    
     CTTelephonyNetworkInfo *networkInfo = [[CTTelephonyNetworkInfo alloc] init];
     NSString *currentStatus = networkInfo.currentRadioAccessTechnology;
     
@@ -211,10 +226,10 @@
         currentNet = @"HRPD";
     } else if ([currentStatus isEqualToString:CTRadioAccessTechnologyLTE]) {
         currentNet = @"4G";
-    } else if (@available(iOS 14.0, *)) {
+    } else if (@available(iOS 14.1, *)) {
         if ([currentStatus isEqualToString:CTRadioAccessTechnologyNRNSA]) {
             currentNet = @"5G NSA";
-        }else if ([currentStatus isEqualToString:CTRadioAccessTechnologyNR]) {
+        } else if ([currentStatus isEqualToString:CTRadioAccessTechnologyNR]) {
             currentNet = @"5G";
         }
     }
