@@ -45,6 +45,15 @@
     }];
 }
 
+- (void)updateConfig:(SLSConfig *)config {
+    __block SLSConfig *conf = config;
+    
+    [_plugins enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        IPlugin *plugin = obj;
+        [plugin updateConfig:conf];
+    }];
+}
+
 #pragma mark - init adapter
 - (BOOL) initWithSLSConfig:(SLSConfig *)config {
     
