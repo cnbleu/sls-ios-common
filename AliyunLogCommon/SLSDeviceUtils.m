@@ -16,7 +16,8 @@
 #import "Reachability/Reachability.h"
 
 @interface SLSDeviceUtils ()
-
++ (NSString *) getNetworkType;
++ (NSString *) getReachabilityStatus;
 @end
 
 @implementation SLSDeviceUtils
@@ -184,57 +185,127 @@
     return carrierName;
 }
 
-+ (NSString *)getNetType {
++ (NSString *)getReachabilityStatus {
     Reachability *reachability = [Reachability reachabilityWithHostname:@"www.aliyun.com"];
     switch ([reachability currentReachabilityStatus]) {
         case NotReachable:
-            return @"没有网络";
+            return @"Unknown";
         case ReachableViaWiFi:
             return @"Wi-Fi";
             break;
         case ReachableViaWWAN:
-            // WWAN
+            return @"WWAN";
             break;
         default:
             return @"";
     }
-    
+}
+
++ (NSString *)getNetworkType {
     CTTelephonyNetworkInfo *networkInfo = [[CTTelephonyNetworkInfo alloc] init];
     NSString *currentStatus = networkInfo.currentRadioAccessTechnology;
+    return currentStatus;
+}
+
++ (NSString *)getNetworkTypeName {
+    NSString *currentReachabilityStatus = [self getReachabilityStatus];
+    if(![@"WWAN" isEqual:currentReachabilityStatus]) {
+        return currentReachabilityStatus;
+    }
     
-    NSString *currentNet = @"5G";
-    
-    if ([currentStatus isEqualToString:CTRadioAccessTechnologyGPRS]) {
-        currentNet = @"GPRS";
-    } else if ([currentStatus isEqualToString:CTRadioAccessTechnologyEdge]) {
-        currentNet = @"2.75G EDGE";
-    } else if ([currentStatus isEqualToString:CTRadioAccessTechnologyWCDMA]) {
-        currentNet = @"3G";
-    } else if ([currentStatus isEqualToString:CTRadioAccessTechnologyHSDPA]) {
-        currentNet = @"3.5G HSDPA";
-    } else if ([currentStatus isEqualToString:CTRadioAccessTechnologyHSUPA]) {
-        currentNet = @"3.5G HSUPA";
-    } else if ([currentStatus isEqualToString:CTRadioAccessTechnologyCDMA1x]) {
-        currentNet = @"2G";
-    } else if ([currentStatus isEqualToString:CTRadioAccessTechnologyCDMAEVDORev0]) {
-        currentNet = @"3G";
-    } else if ([currentStatus isEqualToString:CTRadioAccessTechnologyCDMAEVDORevA]) {
-        currentNet = @"3G";
-    } else if ([currentStatus isEqualToString:CTRadioAccessTechnologyCDMAEVDORevB]) {
-        currentNet = @"3G";
-    } else if ([currentStatus isEqualToString:CTRadioAccessTechnologyeHRPD]) {
-        currentNet = @"HRPD";
-    } else if ([currentStatus isEqualToString:CTRadioAccessTechnologyLTE]) {
-        currentNet = @"4G";
-    } else if (@available(iOS 14.1, *)) {
-        if ([currentStatus isEqualToString:CTRadioAccessTechnologyNRNSA]) {
-            currentNet = @"5G NSA";
-        } else if ([currentStatus isEqualToString:CTRadioAccessTechnologyNR]) {
-            currentNet = @"5G";
+    NSString *currentStatus = [self getNetworkType];
+
+    if ([currentStatus isEqualToString:CTRadioAccessTechnologyLTE]) {
+        return @"4G";
+    }
+
+    if (@available(iOS 14.1, *)) {
+        if ([currentStatus isEqualToString:CTRadioAccessTechnologyNRNSA]
+            || [currentStatus isEqualToString:CTRadioAccessTechnologyNR]) {
+            return @"5G";
         }
     }
     
-    return currentNet;
+    if ([currentStatus isEqualToString:CTRadioAccessTechnologyWCDMA]
+       || [currentStatus isEqualToString:CTRadioAccessTechnologyHSDPA]
+       || [currentStatus isEqualToString:CTRadioAccessTechnologyHSUPA]
+       || [currentStatus isEqualToString:CTRadioAccessTechnologyCDMAEVDORev0]
+       || [currentStatus isEqualToString:CTRadioAccessTechnologyCDMAEVDORevA]
+       || [currentStatus isEqualToString:CTRadioAccessTechnologyCDMAEVDORevB]
+       || [currentStatus isEqualToString:CTRadioAccessTechnologyeHRPD]) {
+        return @"3G";
+    }
+    
+    if ([currentStatus isEqualToString:CTRadioAccessTechnologyGPRS]
+        || [currentStatus isEqualToString:CTRadioAccessTechnologyEdge]
+        || [currentStatus isEqualToString:CTRadioAccessTechnologyCDMA1x]) {
+        return @"2G";
+    }
+    
+    return @"Unknown";
+}
+
++ (NSString *)getNetworkSubTypeName {
+    NSString *currentReachabilityStatus = [self getReachabilityStatus];
+    if(![@"WWAN" isEqual:currentReachabilityStatus]) {
+        return @"Unknown";
+    }
+    
+    NSString *currentStatus = [self getNetworkType];
+    
+    if ([currentStatus isEqualToString:CTRadioAccessTechnologyGPRS]) {
+        return @"GPRS";
+    }
+    
+    if ([currentStatus isEqualToString:CTRadioAccessTechnologyEdge]) {
+        return @"EDGE";
+    }
+    
+    if ([currentStatus isEqualToString:CTRadioAccessTechnologyWCDMA]) {
+        return @"WCDMA";
+    }
+    
+    if ([currentStatus isEqualToString:CTRadioAccessTechnologyHSDPA]) {
+        return @"HSDPA";
+    }
+    
+    if ([currentStatus isEqualToString:CTRadioAccessTechnologyHSUPA]) {
+        return @"HSUPA";
+    }
+    
+    if ([currentStatus isEqualToString:CTRadioAccessTechnologyCDMA1x]) {
+        return @"CDMA1x";
+    }
+    
+    if ([currentStatus isEqualToString:CTRadioAccessTechnologyCDMAEVDORev0]) {
+        return @"EVDOv0";
+    }
+    
+    if ([currentStatus isEqualToString:CTRadioAccessTechnologyCDMAEVDORevA]) {
+        return @"EVDORevA";
+    }
+    
+    if ([currentStatus isEqualToString:CTRadioAccessTechnologyCDMAEVDORevB]) {
+        return @"EVDORevB";
+    }
+    
+    if ([currentStatus isEqualToString:CTRadioAccessTechnologyeHRPD]) {
+        return @"HRPD";
+    }
+    
+    if ([currentStatus isEqualToString:CTRadioAccessTechnologyLTE]) {
+        return @"LTE";
+    }
+    
+    if (@available(iOS 14.1, *)) {
+        if ([currentStatus isEqualToString:CTRadioAccessTechnologyNRNSA]) {
+            return @"NRNSA";
+        } else if ([currentStatus isEqualToString:CTRadioAccessTechnologyNR]) {
+            return @"NR";
+        }
+    }
+    
+    return @"Unknown";
 }
 
 @end

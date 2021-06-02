@@ -38,15 +38,15 @@
     scheme.app_version = [scheme returnDashIfNull:[infoDictionary objectForKey:@"CFBundleShortVersionString"]];
     
     scheme.utdid = [Utdid getUtdid];
-//            scheme.imei = returnDashIfNull(DeviceUtils.getImei(context));
-//            scheme.imsi = returnDashIfNull(DeviceUtils.getImsi(context));
+    scheme.imei = @"-";
+    scheme.imsi = @"-";
     scheme.brand = [scheme returnDashIfNull: [[UIDevice currentDevice] model]];
     scheme.device_model = [scheme returnDashIfNull:[SLSDeviceUtils getDeviceModel]];
     scheme.os = @"iOS";
     scheme.os_version = [scheme returnDashIfNull:[[UIDevice currentDevice] systemVersion]];
     scheme.carrier = [scheme returnDashIfNull:[SLSDeviceUtils getCarrier]];
-    scheme.access = [scheme returnDashIfNull:[SLSDeviceUtils getNetType]];
-//            scheme.access_subtype = returnDashIfNull(DeviceUtils.getAccessSubTypeName(context));
+    scheme.access = [scheme returnDashIfNull:[SLSDeviceUtils getNetworkTypeName]];
+    scheme.access_subtype = [scheme returnDashIfNull:[SLSDeviceUtils getNetworkSubTypeName]];
     NSString *root = [SLSDeviceUtils isJailBreak];
     scheme.root = [scheme returnDashIfNull:root];
     scheme.resolution = [scheme returnDashIfNull:[SLSDeviceUtils getResolution]];
