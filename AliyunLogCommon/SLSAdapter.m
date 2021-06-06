@@ -6,6 +6,7 @@
 //
 
 #import "SLSAdapter.h"
+//#import "SLSLog.h"
 
 @implementation SLSAdapter
 - (void) setChannel: (NSString *)channel{
@@ -35,17 +36,20 @@
 
 - (void)resetSecurityToken:(NSString *)accessKeyId secret:(NSString *)accessKeySecret token:(NSString *)token
 {
+    SLSLogV(@"accessKeyId: %@, secret: %@, token: %@", accessKeyId, accessKeySecret, token);
+    
     __block NSString *keyId = accessKeyId;
     __block NSString *keySecret = accessKeySecret;
     __block NSString *keyToken = token;
     
     [_plugins enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-            IPlugin *plugin = obj;
-            [plugin resetSecurityToken:keyId secret:keySecret token:keyToken];
+        IPlugin *plugin = obj;
+        [plugin resetSecurityToken:keyId secret:keySecret token:keyToken];
     }];
 }
 
 - (void)updateConfig:(SLSConfig *)config {
+    SLSLogV(@"config: %@", config);
     __block SLSConfig *conf = config;
     
     [_plugins enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
@@ -56,13 +60,16 @@
 
 #pragma mark - init adapter
 - (BOOL) initWithSLSConfig:(SLSConfig *)config {
+    SLSLog(@"start.");
     
     [_plugins enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
         IPlugin *plugin = obj;
+        SLSLogV(@"start init plugin: %@", [plugin name]);
         [plugin initWithSLSConfig:config];
+        SLSLogV(@"end init plugin: %@", [plugin name]);
     }];
 
-    NSLog(@"ALSAdapter init end.");
+    SLSLog(@"end.");
     return YES;
 }
 
