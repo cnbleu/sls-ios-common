@@ -13,7 +13,8 @@
 #import <sys/stat.h>
 #import <dlfcn.h>
 //#import <Reachability/Reachability.h>
-#import "Reachability/Reachability.h"
+//#import "Reachability/Reachability.h"
+#import "reachable/Rechable.h"
 
 @interface SLSDeviceUtils ()
 + (NSString *) getNetworkType;

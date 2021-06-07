@@ -95,10 +95,10 @@ https://help.aliyun.com/product/28958.html
 
   # spec.source_files  = "Classes", "Classes/**/*.{h,m}"
   # spec.exclude_files = "Classes/Exclude"
-  spec.source_files = "AliyunLogCommon/*.{h,m}", "AliyunLogCommon/plugin/*.{h,m}", "AliyunLogCommon/utdid/*.{h,m}"
+  spec.source_files = "AliyunLogCommon/*.{h,m}", "AliyunLogCommon/plugin/*.{h,m}", "AliyunLogCommon/utdid/*.{h,m}", "AliyunLogCommon/reachable/*.{h,m}"
 
   # spec.public_header_files = "Classes/**/*.h"
-  spec.public_header_files = "AliyunLogCommon/*.h", "AliyunLogCommon/plugin/*.h", "AliyunLogCommon/utdid/*.h"
+  spec.public_header_files = "AliyunLogCommon/*.h", "AliyunLogCommon/plugin/*.h", "AliyunLogCommon/utdid/*.h", "AliyunLogCommon/reachable/*.h"
 
 
   # ――― Resources ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -122,7 +122,7 @@ https://help.aliyun.com/product/28958.html
   #
 
   # spec.framework  = "SomeFramework"
-  # spec.frameworks = "SomeFramework", "AnotherFramework"
+   spec.frameworks = "SystemConfiguration"
 
   # spec.library   = "iconv"
   # spec.libraries = "iconv", "xml2"
@@ -139,6 +139,6 @@ https://help.aliyun.com/product/28958.html
 
   # spec.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
   # spec.dependency "JSONKit", "~> 1.4"
-  spec.dependency 'Reachability', '~> 3.2'
+#  spec.dependency 'Reachability', '~> 3.2'
 
 end

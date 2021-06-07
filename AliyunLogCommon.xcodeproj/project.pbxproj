@@ -20,6 +20,8 @@
 		F88B64202654B1CA000BBB81 /* TCData.m in Sources */ = {isa = PBXBuildFile; fileRef = F88B641E2654B1CA000BBB81 /* TCData.m */; };
 		F88B64232654B20B000BBB81 /* SLSAdapter.h in Headers */ = {isa = PBXBuildFile; fileRef = F88B64212654B20B000BBB81 /* SLSAdapter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F88B64242654B20B000BBB81 /* SLSAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = F88B64222654B20B000BBB81 /* SLSAdapter.m */; };
+		F89C45C3266DB8880060F58C /* Rechable.h in Headers */ = {isa = PBXBuildFile; fileRef = F89C45C1266DB8880060F58C /* Rechable.h */; };
+		F89C45C4266DB8880060F58C /* Rechable.m in Sources */ = {isa = PBXBuildFile; fileRef = F89C45C2266DB8880060F58C /* Rechable.m */; };
 		F8C9BDC0266605E40076D211 /* Utdid.h in Headers */ = {isa = PBXBuildFile; fileRef = F8C9BDBE266605E40076D211 /* Utdid.h */; };
 		F8C9BDC1266605E40076D211 /* Utdid.m in Sources */ = {isa = PBXBuildFile; fileRef = F8C9BDBF266605E40076D211 /* Utdid.m */; };
 		F8C9BDC4266607F00076D211 /* Storage.h in Headers */ = {isa = PBXBuildFile; fileRef = F8C9BDC2266607F00076D211 /* Storage.h */; };
@@ -57,6 +59,8 @@
 		F88B641E2654B1CA000BBB81 /* TCData.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TCData.m; sourceTree = "<group>"; };
 		F88B64212654B20B000BBB81 /* SLSAdapter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SLSAdapter.h; sourceTree = "<group>"; };
 		F88B64222654B20B000BBB81 /* SLSAdapter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SLSAdapter.m; sourceTree = "<group>"; };
+		F89C45C1266DB8880060F58C /* Rechable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Rechable.h; sourceTree = "<group>"; };
+		F89C45C2266DB8880060F58C /* Rechable.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Rechable.m; sourceTree = "<group>"; };
 		F89DB95E265CBB510086FE2A /* AliyunLogCommon.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = AliyunLogCommon.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		F89DB95F265CBC520086FE2A /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		F8B9CFFE26667C3800045DD6 /* Reachability.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Reachability.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -132,6 +136,7 @@
 		F88B63C02654A92B000BBB81 /* AliyunLogCommon */ = {
 			isa = PBXGroup;
 			children = (
+				F89C45C0266DB8610060F58C /* reachable */,
 				F8C9BDBD266605B30076D211 /* utdid */,
 				F88B63DC2654AA00000BBB81 /* plugin */,
 				F88B63C12654A92B000BBB81 /* AliyunLogCommon.h */,
@@ -166,6 +171,15 @@
 			path = plugin;
 			sourceTree = "<group>";
 		};
+		F89C45C0266DB8610060F58C /* reachable */ = {
+			isa = PBXGroup;
+			children = (
+				F89C45C1266DB8880060F58C /* Rechable.h */,
+				F89C45C2266DB8880060F58C /* Rechable.m */,
+			);
+			path = reachable;
+			sourceTree = "<group>";
+		};
 		F8C9BDBD266605B30076D211 /* utdid */ = {
 			isa = PBXGroup;
 			children = (
@@ -190,6 +204,7 @@
 				F88B641F2654B1CA000BBB81 /* TCData.h in Headers */,
 				F8C9BDC4266607F00076D211 /* Storage.h in Headers */,
 				F88B63DF2654AA1E000BBB81 /* IPlugin.h in Headers */,
+				F89C45C3266DB8880060F58C /* Rechable.h in Headers */,
 				F88B64232654B20B000BBB81 /* SLSAdapter.h in Headers */,
 				F8C9BDC0266605E40076D211 /* Utdid.h in Headers */,
 			);
@@ -320,6 +335,7 @@
 				F8C9BDC1266605E40076D211 /* Utdid.m in Sources */,
 				F88B64202654B1CA000BBB81 /* TCData.m in Sources */,
 				F88B64142654B03F000BBB81 /* SLSConfig.m in Sources */,
+				F89C45C4266DB8880060F58C /* Rechable.m in Sources */,
 				F88B64242654B20B000BBB81 /* SLSAdapter.m in Sources */,
 				F88B63E02654AA1E000BBB81 /* IPlugin.m in Sources */,
 				F8193BA0266517EC00C3BD07 /* SLSDeviceUtils.m in Sources */,
