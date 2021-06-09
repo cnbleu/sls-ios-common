@@ -23,11 +23,10 @@
     TCData *scheme = [[TCData alloc] init];
     
     NSDate *date = [NSDate date];
-    NSTimeInterval timeStmp = [date timeIntervalSince1970] * 1000;
-    scheme.local_time = [NSString stringWithFormat:@"%.0f", timeStmp];
+    scheme.local_timestamp = [NSString stringWithFormat:@"%.0f", [date timeIntervalSince1970] * 1000];
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc]init];
-    [dateFormatter setDateFormat:@"YYYY-MM-dd HH:mm:ss SSS"];
-    scheme.local_timestamp = [dateFormatter stringFromDate:date];
+    [dateFormatter setDateFormat:@"YYYY-MM-dd HH:mm:ss:SSS"];
+    scheme.local_time = [dateFormatter stringFromDate:date];
 
     NSDictionary *infoDictionary = [[NSBundle mainBundle] infoDictionary];
     
