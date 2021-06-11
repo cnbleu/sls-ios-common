@@ -187,7 +187,7 @@
 }
 
 + (NSString *)getReachabilityStatus {
-    Reachability *reachability = [Reachability reachabilityWithHostname:@"www.aliyun.com"];
+    Reachable *reachability = [Reachable reachabilityWithHostname:@"www.aliyun.com"];
     switch ([reachability currentReachabilityStatus]) {
         case NotReachable:
             return @"Unknown";
