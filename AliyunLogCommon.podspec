@@ -16,7 +16,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "AliyunLogCommon"
-  spec.version      = "1.0.10"
+  spec.version      = "1.0.11"
   spec.summary      = "aliyun sls iOS log common"
 
   # This description is used to generate tags and improve search results.
@@ -120,9 +120,9 @@ https://help.aliyun.com/product/28958.html
   #  Link your library with frameworks, or libraries. Libraries do not include
   #  the lib prefix of their name.
   #
-
+  spec.dependency "AliyunLogProducer"
   # spec.framework  = "SomeFramework"
-   spec.frameworks = "SystemConfiguration"
+  spec.frameworks = "SystemConfiguration"
 
   # spec.library   = "iconv"
   # spec.libraries = "iconv", "xml2"

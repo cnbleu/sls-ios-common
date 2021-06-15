@@ -9,6 +9,7 @@
 #import "SLSDeviceUtils.h"
 #import <UIKit/UIKit.h>
 #import "utdid/Utdid.h"
+#import "AliyunLogProducer/AliyunLogProducer.h"
 
 @interface TCData ()
 -(void) putIfNotNull:(NSMutableDictionary *)dictionay andKey:(NSString *)key andValue:(NSString *)value;
@@ -27,6 +28,11 @@
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc]init];
     [dateFormatter setDateFormat:@"YYYY-MM-dd HH:mm:ss:SSS"];
     scheme.local_time = [dateFormatter stringFromDate:date];
+    
+    date = [NSDate dateWithTimeIntervalSince1970:[[NSString stringWithFormat:@"%ld%@%@", (long)[TimeUtils getTimeInMilliis], @".",[scheme.local_timestamp substringFromIndex:10]] doubleValue]];
+    scheme.local_timestamp_fixed = [NSString stringWithFormat:@"%.0f%@", [date timeIntervalSince1970], [scheme.local_timestamp substringFromIndex:10]];
+    scheme.local_time_fixed = [dateFormatter stringFromDate:date];
+    
 
     NSDictionary *infoDictionary = [[NSBundle mainBundle] infoDictionary];
     
@@ -110,6 +116,8 @@
     [self putIfNotNull:fields andKey:@"reserves" andValue: [self reserves]];
     [self putIfNotNull:fields andKey:@"local_time" andValue: [self local_time]];
     [self putIfNotNull:fields andKey:@"local_timestamp" andValue: [self local_timestamp]];
+    [self putIfNotNull:fields andKey:@"local_time_fixed" andValue: [self local_time_fixed]];
+    [self putIfNotNull:fields andKey:@"local_timestamp_fixed" andValue: [self local_timestamp_fixed]];
     [self putIfNotNull:fields andKey:@"reach_time" andValue: [self reach_time]];
     [self putIfNotNull:fields andKey:@"reach_time_stamp" andValue: [self reach_time_stamp]];
     [self putIfNotNull:fields andKey:@"page" andValue: [self page]];
