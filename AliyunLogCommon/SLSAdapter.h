@@ -31,7 +31,8 @@ NS_ASSUME_NONNULL_BEGIN
 - (BOOL) initWithSLSConfig: (SLSConfig *) config;
 - (BOOL) addPlugin: (IPlugin *) plugin;
 - (void) removePlugin: (IPlugin *) plugin;
-- (void) resetSecurityToken: (NSString *)accessKeyId secret: (NSString *)accessKeySecret token: (NSString *) token;
+- (void) resetSecurityToken: (nullable NSString *)accessKeyId secret: (nullable NSString *)accessKeySecret token: (nullable NSString *) token;
+- (void) resetProject: (nullable NSString *)endpoint project: (nullable NSString *)project logstore: (nullable NSString *)logstore;
 - (void) updateConfig: (SLSConfig *)config;
 @end
 

@@ -48,6 +48,14 @@
     }];
 }
 
+- (void)resetProject:(NSString *)endpoint project:(NSString *)project logstore:(NSString *)logstore
+{
+    SLSLogV(@"endpoint: %@, project: %@, logstore: %@", endpoint, project, logstore);
+    for (IPlugin *plugin in _plugins) {
+        [plugin resetProject:endpoint project:project logstore:logstore];
+    }
+}
+
 - (void)updateConfig:(SLSConfig *)config {
     SLSLogV(@"config: %@", config);
     __block SLSConfig *conf = config;
