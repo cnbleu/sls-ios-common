@@ -16,7 +16,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "AliyunLogCommon"
-  spec.version      = "1.0.13"
+  spec.version      = "1.0.14"
   spec.summary      = "aliyun sls iOS log common"
 
   # This description is used to generate tags and improve search results.
@@ -83,7 +83,7 @@ https://help.aliyun.com/product/28958.html
   #
 
   #  spec.source = { :git => 'git@github.com:cnbleu/sls-ios-common.git', :tag => spec.version.to_s }
-  spec.source = { :http => 'https://sls-ios-repo.oss-cn-shanghai.aliyuncs.com/sls_common/1.0.13/AliyunLogCommon.framework.zip' }
+  spec.source = { :http => 'https://sls-ios-repo.oss-cn-shanghai.aliyuncs.com/sls_common/1.0.14/AliyunLogCommon.framework.zip' }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -99,7 +99,7 @@ https://help.aliyun.com/product/28958.html
   #  spec.source_files = "AliyunLogCommon/*.{h,m}", "AliyunLogCommon/plugin/*.{h,m}", "AliyunLogCommon/utdid/*.{h,m}", "AliyunLogCommon/reachable/*.{h,m}"
 
   # spec.public_header_files = "Classes/**/*.h"
-  #  spec.public_header_files = "AliyunLogCommon/*.h", "AliyunLogCommon/plugin/*.h", "AliyunLogCommon/utdid/*.h", "AliyunLogCommon/reachable/*.h"
+  spec.public_header_files = "AliyunLogCommon/*.h", "AliyunLogCommon/plugin/*.h", "AliyunLogCommon/utdid/*.h", "AliyunLogCommon/reachable/*.h"
 
 
   # ――― Resources ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
