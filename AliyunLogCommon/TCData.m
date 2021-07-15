@@ -14,6 +14,7 @@
 @interface TCData ()
 -(void) putIfNotNull:(NSMutableDictionary *)dictionay andKey:(NSString *)key andValue:(NSString *)value;
 -(NSString *)returnDashIfNull: (NSString *)value;
+-(void) put:(NSMutableDictionary *)dictionay andKey:(NSString *)key andValue:(NSString *)value;
 @end
 
 
@@ -41,6 +42,7 @@
         scheme.app_name = [scheme returnDashIfNull: [infoDictionary objectForKey:@"CFBundleName"]];
     }
     scheme.app_version = [scheme returnDashIfNull:[infoDictionary objectForKey:@"CFBundleShortVersionString"]];
+    scheme.build_code = [scheme returnDashIfNull:[infoDictionary objectForKey:@"CFBundleVersion"]];
     
     scheme.utdid = [Utdid getUtdid];
     scheme.imei = @"-";
@@ -69,6 +71,7 @@
     [data setUser_id:[data returnDashIfNull:config.userId]];
     [data setLong_login_user_id:[data returnDashIfNull:config.longLoginUserId]];
     [data setLogon_type:[data returnDashIfNull:config.loginType]];
+    [data setExt:config.ext];
     
     return data;
 }
@@ -82,6 +85,7 @@
     [self putIfNotNull:fields andKey:@"app_id" andValue: [self app_id]];
     [self putIfNotNull:fields andKey:@"app_name" andValue: [self app_name]];
     [self putIfNotNull:fields andKey:@"app_version" andValue: [self app_version]];
+    [self putIfNotNull:fields andKey:@"build_code" andValue: [self build_code]];
     [self putIfNotNull:fields andKey:@"sdk_version" andValue: [self sdk_version]];
     [self putIfNotNull:fields andKey:@"sdk_type" andValue: [self sdk_type]];
     [self putIfNotNull:fields andKey:@"channel" andValue: [self channel]];
@@ -139,6 +143,11 @@
     [self putIfNotNull:fields andKey:@"city" andValue: [self city]];
     [self putIfNotNull:fields andKey:@"district" andValue: [self district]];
     
+    for (NSString *key in _ext) {
+        NSString *value =_ext[key];
+        [self put:fields andKey:key andValue:value];
+    }
+    
     return fields;
 }
 
@@ -154,6 +163,19 @@
     }
     
     return value;
+}
+
+- (void)put:(NSMutableDictionary *)dictionay andKey:(NSString *)key andValue:(NSString *)value
+{
+    if (nil == key) {
+        key = @"null";
+    }
+    
+    if (nil == value) {
+        value = @"null";
+    }
+    
+    [dictionay setValue:value forKey:key];
 }
 
 @end

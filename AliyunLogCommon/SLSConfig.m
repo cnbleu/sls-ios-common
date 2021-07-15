@@ -8,6 +8,28 @@
 #import "SLSConfig.h"
 
 @implementation SLSConfig
+
+- (instancetype)init
+{
+    if (self = [super init]) {
+        _ext = [NSMutableDictionary dictionary];
+    }
+    return self;
+}
+
+- (void)addCustomWithKey:(nullable NSString *)key andValue:(nullable NSString *)value
+{
+    if (nil == key) {
+        key = @"null";
+    }
+    
+    if (nil == value) {
+        value = @"null";
+    }
+    
+    [_ext setValue:value forKey:key];
+}
+
 - (NSString *)description
 {
     return [NSString stringWithFormat:@"%@", @{
@@ -26,7 +48,8 @@
             @"longLoginNick": (_longLoginNick != nil ? _longLoginNick : @""),
             @"userId": (_userId != nil ? _userId : @""),
             @"longLoginUserId": (_longLoginUserId != nil ? _longLoginUserId : @""),
-            @"loginType": (_loginType != nil ? _loginType : @"")
+            @"loginType": (_loginType != nil ? _loginType : @""),
+            @"ext": (_ext != nil ? _ext : @"")
         }];
 }
 @end

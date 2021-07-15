@@ -29,6 +29,9 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic, strong) NSString * userId;
 @property(nonatomic, strong) NSString * longLoginUserId;
 @property(nonatomic, strong) NSString * loginType;
+@property(nonatomic, strong, readonly) NSMutableDictionary * ext;
+
+- (void) addCustomWithKey: (nullable NSString *)key andValue: (nullable NSString *)value;
 @end
 
 NS_ASSUME_NONNULL_END

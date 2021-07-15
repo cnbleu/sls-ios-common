@@ -14,6 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic, strong) NSString * app_id;
 @property(nonatomic, strong) NSString * app_name;
 @property(nonatomic, strong) NSString * app_version;
+@property(nonatomic, strong) NSString * build_code;
 @property(nonatomic, strong) NSString * sdk_version;
 @property(nonatomic, strong) NSString * sdk_type;
 @property(nonatomic, strong) NSString * channel;
@@ -70,6 +71,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic, strong) NSString * province;
 @property(nonatomic, strong) NSString * city;
 @property(nonatomic, strong) NSString * district;
+@property(nonatomic, strong) NSMutableDictionary * ext;
 
 + (TCData *) createDefault;
 + (TCData *) createDefaultWithSLSConfig: (SLSConfig *) config;
